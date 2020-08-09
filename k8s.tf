@@ -5,7 +5,7 @@ resource "digitalocean_kubernetes_cluster" "k8s" {
 
   node_pool {
     name       = "main"
-    size       = "s-1vcpu-2gb"
+    size       = "s-1vcpu-1gb"
     node_count = 1
   }
 }
@@ -14,6 +14,6 @@ resource "digitalocean_kubernetes_node_pool" "k8s_nodes" {
   cluster_id = digitalocean_kubernetes_cluster.k8s.id
 
   name       = "main-node-pool"
-  size       = "s-1vcpu-2gb"
-  node_count = 2
+  size       = "s-1vcpu-1gb"
+  node_count = 1
 }
