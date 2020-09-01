@@ -1,7 +1,7 @@
 resource "digitalocean_kubernetes_cluster" "k8s" {
   name    = "itizen"
   region  = "nyc1"
-  version = "1.18.6-do.0"
+  version = "latest"
 
   node_pool {
     name       = "main"
